@@ -64,7 +64,7 @@ console.log(candidate,"cccc");
                     {btnName}
 
                 </button>
-                <p className="signin" > {btnDescription} <Button onClick={()=>setSignIn(!signIn)}>{title === "Register" ? "SignIn": "SignUp"}</Button> </p>
+                <p className="signin" > {btnDescription} <Button onClick={()=>setSignIn(!signIn)}>{title === "Register" ?  "SignUp" :"SignIn"}</Button> </p>
             </form >
         </>
     )
