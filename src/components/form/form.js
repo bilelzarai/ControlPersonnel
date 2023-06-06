@@ -4,24 +4,24 @@ import { Button } from 'react-md';
 const Sign = (
    {
     titleForm, 
-    title, 
+    title,
+    setTitle,
     btnName, 
     btnDescription,
-    signIn,
-    setSignIn,
-    candidate,
-    setCandidate,
+    // candidate,
+    // setCandidate,
     }) => {
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [rePassword, setRePassword] = useState("")
-    // const [form, setForm] = useState()
+    // const [form, setForm] = useState(false)
 
-    // const [candidate, setCandidate] = useState ({})
+    const candidate =[firstName,lastName,email,password]
 
     const disableInput = () => { return (title = 'Register' ? firstName && lastName && email && password && rePassword === password: email && password) }
+    // const resetCandidate =()=>{candidate[1] === setFirstName("") ,candidate[2] === setLastName("")}
 console.log(candidate,"cccc");
     return (
         <>
@@ -59,12 +59,19 @@ console.log(candidate,"cccc");
                     <span></span>
                 </label>
                 }
-                <button className="submit" disabled={!disableInput()}  onClick={()=> setCandidate({title, firstName, email, password, rePassword })}>
+                <button className="submit" disabled={!disableInput()}  
+                // onClick={()=> setCandidate({title, firstName, email, password, rePassword })}
+                >
 
                     {btnName}
 
                 </button>
-                <p className="signin" > {btnDescription} <Button onClick={()=>setSignIn(!signIn)}>{title === "Register" ?  "SignUp" :"SignIn"}</Button> </p>
+                { title === "Register" 
+
+               ? <p className="signin" > {btnDescription} <Button onClick={()=>title = "Register"}>{title === "Register" ?  "SignUp" :"SignIn"}</Button> </p>
+               : <p className="signin" > {btnDescription} <Button onClick={()=>setTitle("Login")}>{title === "Register" ?  "SignUp" :"SignIn"}</Button> </p>
+
+                 }
             </form >
         </>
     )

@@ -1,30 +1,21 @@
 import { useState } from 'react';
 import './sign-up.scss';
-import { Button } from 'react-md';
+// import { Button } from 'react-md';
 const SignUp = () => {
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [rePassword, setRePassword] = useState("")
-    const [form, setForm]=useState("SignUp")
+    // const [candidate, setCandidate]=useState([firstName,lastName])
 
     const candidate =[firstName,lastName]
-    console.log("candidate", candidate)
+    console.log("candidate", candidate[1])
 
-    const switchReg = ()=> {  
-           console.log("candidate", candidate);
-           form  ? setForm("SignIn") : setForm("SignUp")
-        }
+  
         
     return (
         <>
-            <Button onClick={()=> switchReg()} >
-
-            {form}
-
-            </Button>
-
             {candidate}
 
             <form className="form">
@@ -33,7 +24,7 @@ const SignUp = () => {
                 <div className="flex">
                     <label>
                         <span> First name</span>
-                        <input className="input" type="text" required    placeholder="" onChange={e => setFirstName(e.target.value)} />
+                        <input className="input" type="text" required    placeholder="" onChange={e =>  setFirstName(e.target.value)} />
                     </label>
 
                     <label>

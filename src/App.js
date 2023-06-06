@@ -4,37 +4,36 @@ import SignSr from "./components/form/form";
 // import ConfirmDialog from "./components/dialog-confirm/confirm";
 // import SignUp from "./components/sign/sign-up/sign-up";
 function App() {
-  const [signIn, setSignIn] = useState("SignIn")
-  const [candidate, setCandidate] = useState ({})
+  const [title, setTitle] = useState("Register")
+  // const [candidate, setCandidate] = useState ({})
 
   return (
     <>
-
+{title === "Register" ?
   <SignSr      
       
       titleForm ={"Add new employee"} 
-      title ={"Register"}
+      title ={title}
+      setTitle={()=>setTitle("Login") }
       btnName = {"Submit"} 
       btnDescription={"Already have an acount ?"}    
-      signIn={signIn}
-      setSign={()=>setSignIn("SignUp") }
-      candidate={candidate}
-      setCandidate={setCandidate}
+      // candidate={candidate}
+      // setCandidate={setCandidate}
       /> 
-    
-   {/* <SignSr      
+    :
+   <SignSr      
       
     titleForm ={"Welcome"} 
-    title ={"Login"}
+    title ={title}
     btnName = {"Login"} 
     btnDescription={"Create an acount ?"}    
-    signIn={signIn}
-    setSign={()=>setSignIn("SignUp") }
-    candidate={candidate}
-    setCandidate={setCandidate}
-    />  */}
+    setTitle={()=>setTitle("Register") }
+    // candidate={candidate}
+    // setCandidate={setCandidate}
+    />  
+    }
     
-    
+    {/* <SignUp/> */}
 {/* <button onClick={()=>{setConfirm(false)}}> popup</button> */}
       {/* {confirm && (
         <ConfirmDialog
