@@ -1,16 +1,30 @@
 import { useState } from 'react';
 import './sign-up.scss';
+import { Button } from 'react-md';
 const SignUp = () => {
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [rePassword, setRePassword] = useState("")
+    const [form, setForm]=useState("SignUp")
 
     const candidate =[firstName,lastName]
-    console.log("candidate", candidate);
+    console.log("candidate", candidate)
+
+    const switchReg = ()=> {  
+           console.log("candidate", candidate);
+           form  ? setForm("SignIn") : setForm("SignUp")
+        }
+        
     return (
         <>
+            <Button onClick={()=> switchReg()} >
+
+            {form}
+
+            </Button>
+
             {candidate}
 
             <form className="form">
@@ -19,30 +33,26 @@ const SignUp = () => {
                 <div className="flex">
                     <label>
                         <span> First name</span>
-                        <input className="input" type="text" required="" placeholder="" onChange={e => setFirstName(e.target.value)} />
+                        <input className="input" type="text" required    placeholder="" onChange={e => setFirstName(e.target.value)} />
                     </label>
 
-                    {/* <label>
-                        <span></span>
-                        <input className="input" type="text" required="" placeholder="" />
-                    </label>    */}
                     <label>
                         <span>Last name</span>
-                        <input className="input" type="text" required="" placeholder="" onChange={e => setLastName(e.target.value)} />
+                        <input className="input" type="text" required placeholder="" onChange={e => setLastName(e.target.value)} />
                     </label>
                 </div>
 
                 <label>
-                    <input required="" placeholder="Email" type="email" className="input" onChange={e => setEmail(e.target.value)} />
+                    <input required placeholder="Email" type="email" className="input" onChange={e => setEmail(e.target.value)} />
                     <span></span>
                 </label>
 
                 <label>
-                    <input required="" placeholder="Password" type="password" className="input" onChange={e => setPassword(e.target.value)} />
+                    <input required placeholder="Password" type="password" className="input" onChange={e => setPassword(e.target.value)} />
                     <span></span>
                 </label>
                 <label>
-                    <input required="" placeholder="Confirm password" type="password" className="input" onChange={e => setRePassword(e.target.value)} />
+                    <input required  placeholder="Confirm password" type="password" className="input" onChange={e => setRePassword(e.target.value)} />
                     <span></span>
                 </label>
                 <button className="submit" disabled={!firstName || !lastName || !email || !password || !rePassword ? true : false} >
@@ -50,7 +60,7 @@ const SignUp = () => {
                     Submit
 
                 </button>
-                <p className="signin">Already have an acount ? <a href=" ">Signin</a> </p>
+                <p className="signin" >Already have an acount ? <a href=" ">Signin</a> </p>
             </form >
         </>
     )
