@@ -2,14 +2,16 @@ import { useState } from 'react';
 import './form.scss';
 import { Button } from 'react-md';
 const Sign = (
-   {
-    titleForm, 
-    title,
-    setTitle,
-    btnName, 
-    btnDescription,
-    // candidate,
-    // setCandidate,
+    {
+        titleForm,
+        title,
+        setTitle,
+        btnName,
+        btnDescription,
+        signButton,
+        log,
+        // candidate,
+        // setCandidate,
     }) => {
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -18,11 +20,13 @@ const Sign = (
     const [rePassword, setRePassword] = useState("")
     // const [form, setForm] = useState(false)
 
-    const candidate =[firstName,lastName,email,password]
+    // const candidate = [firstName, lastName, email, password]
+    // const [toast, setToast] = useState(false)
 
-    const disableInput = () => { return (title = 'Register' ? firstName && lastName && email && password && rePassword === password: email && password) }
+    const disableInput = () => { return (title = 'Register' ? firstName && lastName && email && password && rePassword === password : email && password) }
     // const resetCandidate =()=>{candidate[1] === setFirstName("") ,candidate[2] === setLastName("")}
-console.log(candidate,"cccc");
+    const forget=()=>{ console.log("forgetMsg","ffff");}
+    console.log(log, "cccc");
     return (
         <>
             {/* {candidate} */}
@@ -32,17 +36,21 @@ console.log(candidate,"cccc");
 
                 <p className="message">{titleForm} </p>
 
-               { title === "Register" &&
-                <div className="flex">
-                    <label>
-                        <span> First name</span>
-                        <input className="input" type="text" required placeholder="" onChange={e => setFirstName(e.target.value)} />
-                    </label>
-                    <label>
-                        <span>Last name</span>
-                        <input className="input" type="text" required placeholder="" onChange={e => setLastName(e.target.value)} />
-                    </label>
-                </div>}
+                {title === "Register" &&
+                    <div className="flex">
+                     
+                        <div className='twoPart'>
+                        <label>
+                            <span>Last name</span>
+                            <input className="input" type="text" required placeholder="" onChange={e => setFirstName(e.target.value)} />
+                        </label>
+                        </div> <div className='twoPart'>
+                        <label>
+                            <span>Last name</span>
+                            <input className="input" type="text" required placeholder="" onChange={e => setLastName(e.target.value)} />
+                        </label>
+                        </div>
+                    </div>}
 
                 <label>
                     <input required placeholder="Email" type="email" className="input" onChange={e => setEmail(e.target.value)} />
@@ -53,25 +61,37 @@ console.log(candidate,"cccc");
                     <input required placeholder="Password" type="password" className="input" onChange={e => setPassword(e.target.value)} />
                     <span></span>
                 </label>
-                { title === "Register" &&
-                <label>
-                    <input required placeholder="Confirm password" type="password" className="input" onChange={e => setRePassword(e.target.value)} />
-                    <span></span>
-                </label>
+                {title === "Register" &&
+                    <label>
+                        <input required placeholder="Confirm password" type="password" className="input" onChange={e => setRePassword(e.target.value)} />
+                        <span></span>
+                    </label>
                 }
-                <button className="submit" disabled={!disableInput()}  
+                {title !== "Register" &&
+                        <div className='flex'>
+                            <div className='twoPart'>
+                                <label>
+                                    <input type="checkbox" name="rememberMe" defaultChecked={false} /> Remember for 30 Days
+                                </label>
+                            </div>
+                            <div className='buttonClass'><button className='button' onClick={()=>forget()}>Forgot password</button></div>
+
+                        </div>
+
+                }
+
+                <button className="submit" disabled={!disableInput()}
                 // onClick={()=> setCandidate({title, firstName, email, password, rePassword })}
                 >
-
                     {btnName}
 
                 </button>
-                { title === "Register" 
 
-               ? <p className="signin" > {btnDescription} <Button onClick={()=>title = "Register"}>{title === "Register" ?  "SignUp" :"SignIn"}</Button> </p>
-               : <p className="signin" > {btnDescription} <Button onClick={()=>setTitle("Login")}>{title === "Register" ?  "SignUp" :"SignIn"}</Button> </p>
+                    <p className="signin" > {btnDescription} <Button onClick={() => setTitle("Login")}>{signButton}</Button> </p>
+                
 
-                 }
+
+
             </form >
         </>
     )

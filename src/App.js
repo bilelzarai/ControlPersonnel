@@ -5,8 +5,7 @@ import SignSr from "./components/form/form";
 // import SignUp from "./components/sign/sign-up/sign-up";
 function App() {
   const [title, setTitle] = useState("Register")
-  // const [candidate, setCandidate] = useState ({})
-
+  // const [signButtom, setSignButtom] = useState ("SIGNUP")
   return (
     <>
 {title === "Register" ?
@@ -16,7 +15,9 @@ function App() {
       title ={title}
       setTitle={()=>setTitle("Login") }
       btnName = {"Submit"} 
-      btnDescription={"Already have an acount ?"}    
+      btnDescription={"Already have an acount ?"}  
+      signButton={"SignIn"}  
+      log="1"
       // candidate={candidate}
       // setCandidate={setCandidate}
       /> 
@@ -28,6 +29,9 @@ function App() {
     btnName = {"Login"} 
     btnDescription={"Create an acount ?"}    
     setTitle={()=>setTitle("Register") }
+    signButton={"SignUp"}  
+    log="2"
+
     // candidate={candidate}
     // setCandidate={setCandidate}
     />  
