@@ -1,17 +1,25 @@
-import { DialogContainer } from 'react-md'
+import { Button, Dialog, DialogContent, DialogFooter } from 'react-md'
 
-const ConfirmDialog = (visible, close, title,desc) => {
+const ConfirmDialog = (visible, title,disable) => {
     return (
-        <DialogContainer
+        <Dialog
             visible={visible}
-            close ={close}
+            title={title}
+            disable={disable}
+
         >
-            <div>
+            <DialogContent>
 
-                {title} {desc}
-            </div>
-
-        </DialogContainer>
+                test
+                {title}
+                {/* {desc} */}
+            </DialogContent>
+            <DialogFooter>
+            <Button id="dialog-close" onClick={disable}>
+                Close
+            </Button>
+        </DialogFooter>
+        </Dialog >
     )
 
 }

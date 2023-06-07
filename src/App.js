@@ -13,7 +13,7 @@ function App() {
       
       titleForm ={"Add new employee"} 
       title ={title}
-      setTitle={()=>setTitle("Login") }
+      setTitle={()=>setTitle("Welcome back") }
       btnName = {"Submit"} 
       btnDescription={"Already have an acount ?"}  
       signButton={"SignIn"}  
@@ -24,7 +24,7 @@ function App() {
     :
    <SignSr      
       
-    titleForm ={"Welcome"} 
+    titleForm ={"Welcome back! Please enter your details"} 
     title ={title}
     btnName = {"Login"} 
     btnDescription={"Create an acount ?"}    

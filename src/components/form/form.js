@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './form.scss';
 import { Button } from 'react-md';
+import ConfirmDialog from '../dialog-confirm/confirm';
 const Sign = (
     {
         titleForm,
@@ -18,6 +19,8 @@ const Sign = (
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [rePassword, setRePassword] = useState("")
+    const d = new Date();
+
     // const [form, setForm] = useState(false)
 
     // const candidate = [firstName, lastName, email, password]
@@ -29,9 +32,11 @@ const Sign = (
     console.log(log, "cccc");
     return (
         <>
-            {/* {candidate} */}
 
+            {/* {candidate} */}
             <form className="form">
+            { d.toLocaleTimeString()+"  "+ d.toLocaleDateString()}
+
                 <p className="title">{title}  </p>
 
                 <p className="message">{titleForm} </p>
@@ -93,6 +98,13 @@ const Sign = (
 
 
             </form >
+            <ConfirmDialog
+            visible = {true}
+            title={"titre test"}
+            disable={false}
+
+            
+            />
         </>
     )
 }
