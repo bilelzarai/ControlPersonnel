@@ -98,13 +98,18 @@ const Sign = (
 
 
             </form >
-            <ConfirmDialog
+            <ConfirmDialog visible={true} title={'Reset your password'}
+             description ={'the post will be displayed to the public once it passes the vetting team'} 
+            // imgCard ={'completedIcon'}
+             />
+
+            {/* <ConfirmDialog
             visible = {true}
             title={"titre test"}
             disable={false}
 
             
-            />
+            /> */}
         </>
     )
 }
