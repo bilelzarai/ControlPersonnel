@@ -1,11 +1,10 @@
-import {  Button, Dialog, Form, MailSVGIcon } from 'react-md'
+import {  Button, Dialog, Form } from 'react-md'
 import './confirm.scss'
 // import icon from '../../images/icon-mail.png'
 // import back from '../../images/back.png'
 // import { Backspace } from '@react-md/material-icons';
 import BackspaceOutlinedIcon from '@mui/icons-material/BackspaceOutlined';
-
-
+import MailIcon from '@mui/icons-material/Mail';
 const ConfirmDialog = ({
     title,
     description,
@@ -38,8 +37,8 @@ const ConfirmDialog = ({
                     <div className='desc'>
                         <div>
                             {/* <img src={icon} alt='' /> */}
-                            <MailSVGIcon />
-                        </div>
+                            <MailIcon fontSize='large'/>
+                                                    </div>
                         <div>Reset via Email<div>
                         </div>Link will be send to your email address</div>
                     </div>

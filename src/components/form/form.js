@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import './form.scss';
 import { Button } from 'react-md';
-import ConfirmDialog from '../dialog-confirm/confirm';
+// import ConfirmDialog from '../dialog-confirm/confirm';
+import DialogInformation from '../dialog-information/dialog-information';
+import MailIcon from '@mui/icons-material/Mail';
+import DialogConfirmRect from '../dialog-confirm-rect/dialog-confirm-rect';
+
 const Sign = (
     {
         titleForm,
@@ -98,18 +102,38 @@ const Sign = (
 
 
             </form >
-            <ConfirmDialog visible={true} title={'Reset your password'}
+            {/* <ConfirmDialog visible={true} title={'Reset your password'}
              description ={'the post will be displayed to the public once it passes the vetting team'} 
             // imgCard ={'completedIcon'}
+             /> */} 
+             
+             {/* <DialogInformation 
+             visible={true} 
+             title={'Please check your mail'}
+             description ={' We have sent a link of reset password to your email.'} 
+             icon={<MailIcon sx={{ fontSize: "50px" }} />}
+
+             /> */}
+             {/* <DialogInformation
+              visible={true}
+              onHide={false}
+              title={'Please check your mail'}
+                icon={<MailIcon sx={{ fontSize: "50px" }} />}
+            description={"Your password has been reset."}
+            link={"Please click here to log in"}
+            skip={'Skip, I’ll log in later'}
+              /> */}
+               <DialogConfirmRect
+             visible={true} 
+             disable={false} 
+             
+             title={'Please check your mail'}
+             description ={' We have sent a link of reset password to your email.'} 
+             icon={<MailIcon sx={{ fontSize: "50px" }} />}
+
              />
 
-            {/* <ConfirmDialog
-            visible = {true}
-            title={"titre test"}
-            disable={false}
-
-            
-            /> */}
+           
         </>
     )
 }

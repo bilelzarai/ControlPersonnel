@@ -1,0 +1,91 @@
+.dialogConfirmRect {
+    display: flex;
+    flex-direction: column;
+    // gap: 20px;
+    // padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    align-items: stretch;
+
+    &-body {
+        display: flex;
+        flex-direction: row;
+        // background-color: gray;
+        padding:  20px;
+        gap: 20px;
+    }
+
+    .footer {
+        background-color: rgb(218, 218, 218);
+        gap: 20px;
+    }
+
+    .button {
+        --color: #00A97F;
+        padding: 0.8em 1.7em;
+        background-color: transparent;
+        border-radius: .3em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: .5s;
+        // font-weight: 400;
+        font-size: 14px;
+        border: 1px solid;
+        font-family: inherit;
+        text-transform: uppercase;
+        z-index: 1;
+
+        &-cancel {
+            background-color: rgb(236, 236, 243);
+            border: 1px solid blue;
+
+        }
+
+        &-confirm {
+            background-color: blue;
+
+        }
+
+    }
+
+    .button::before,
+    .button::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        transition: 1s ease;
+
+
+    }
+
+    .button::before {
+        top: -1em;
+        left: -1em;
+    }
+
+    .button::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+    }
+
+    .button:hover::before,
+    .button:hover::after {
+        height: 410px;
+        width: 410px;
+    }
+
+    .button:hover {
+        color: rgb(10, 25, 30);
+    }
+
+    .button:active {
+        filter: brightness(.8);
+    }
+
+}
