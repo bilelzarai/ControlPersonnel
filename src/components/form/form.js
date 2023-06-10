@@ -7,8 +7,7 @@ import { Button } from 'react-md';
 // import DialogConfirmRect from '../dialog-confirm-rect/dialog-confirm-rect';
 import ResetPwd from '../reset-pwd/reset-pwd';
 
-const Sign = (
-    {
+const Sign = (    {
         titleForm,
         title,
         setTitle,

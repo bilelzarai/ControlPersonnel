@@ -1,0 +1,70 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    // width: 400px;
+    position: relative;
+    background: #602BF8;
+    border-radius: 6px;
+
+    .partition {
+        display: flex;
+        flex-direction: row;
+        color: #FFFFFF;
+
+        &-zonIcon {
+            display: flex;
+            width: 15%;
+            justify-content: center;
+            transform: scaleX(-1);
+            align-items: center;
+        }
+
+        &-title {
+            display: flex;
+            align-items: center;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            width: 70%;
+            background-color: rgb(225, 50, 50);
+
+        }
+
+        &-notification {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 15%;
+
+        }
+    }
+
+    .lastPartition {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: blanchedalmond;
+
+
+        &-parameter {
+            display: flex;
+            align-items: center;
+
+        }
+
+        &-logout {
+            display: flex;
+            align-items: center;
+            transform: scaleX(-1);
+
+        }
+    }
+
+}
