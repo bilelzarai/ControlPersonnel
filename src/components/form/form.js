@@ -6,6 +6,7 @@ import { Button } from 'react-md';
 // import MailIcon from '@mui/icons-material/Mail';
 // import DialogConfirmRect from '../dialog-confirm-rect/dialog-confirm-rect';
 import ResetPwd from '../reset-pwd/reset-pwd';
+import EditProfile from '../edit-profile/edit-profile';
 
 const Sign = (    {
         titleForm,
@@ -132,11 +133,17 @@ const Sign = (    {
              icon={<MailIcon sx={{ fontSize: "50px" }} />}
 
              /> */}
-            <ResetPwd
+            {/* <ResetPwd
                 visible={true}
                 disable={false}
 
-            />
+            />    */}
+            
+            <EditProfile
+            visible={true}
+            disable={false}
+
+        />
 
 
 
