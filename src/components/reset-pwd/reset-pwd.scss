@@ -1,0 +1,73 @@
+.pwd-reset {
+  display: flex;
+  flex-direction: column;
+  // max-width: 550px;
+  width: 450px;
+  background-color: #efefef;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+
+  .gap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+    &-title {
+      font-size: 20px;
+      color: rgb(92, 93, 96);
+      font-weight: 500;
+      letter-spacing: 1px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding-left: 30px;
+    }
+  }
+ 
+
+  .passwords {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+
+
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px 0px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+
+  }
+
+  .input:hover,
+  .input:focus,
+  .input-group:hover .input {
+    outline: none;
+    border-color: #3f4040;
+  }
+  .buttonClass {
+    display: flex;
+    justify-content: flex-end;
+  
+  }
+  
+  .button {
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    outline: none;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+    transform: .3s ease;
+    width: 75%;
+    margin-left: 12.5%;
+  }
+  
+}

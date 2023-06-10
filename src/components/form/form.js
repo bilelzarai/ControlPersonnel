@@ -2,9 +2,10 @@ import { useState } from 'react';
 import './form.scss';
 import { Button } from 'react-md';
 // import ConfirmDialog from '../dialog-confirm/confirm';
-import DialogInformation from '../dialog-information/dialog-information';
-import MailIcon from '@mui/icons-material/Mail';
-import DialogConfirmRect from '../dialog-confirm-rect/dialog-confirm-rect';
+// import DialogInformation from '../dialog-information/dialog-information';
+// import MailIcon from '@mui/icons-material/Mail';
+// import DialogConfirmRect from '../dialog-confirm-rect/dialog-confirm-rect';
+import ResetPwd from '../reset-pwd/reset-pwd';
 
 const Sign = (
     {
@@ -32,14 +33,14 @@ const Sign = (
 
     const disableInput = () => { return (title = 'Register' ? firstName && lastName && email && password && rePassword === password : email && password) }
     // const resetCandidate =()=>{candidate[1] === setFirstName("") ,candidate[2] === setLastName("")}
-    const forget=()=>{ console.log("forgetMsg","ffff");}
+    const forget = () => { console.log("forgetMsg", "ffff"); }
     console.log(log, "cccc");
     return (
         <>
 
             {/* {candidate} */}
             <form className="form">
-            { d.toLocaleTimeString()+"  "+ d.toLocaleDateString()}
+                {d.toLocaleTimeString() + "  " + d.toLocaleDateString()}
 
                 <p className="title">{title}  </p>
 
@@ -47,17 +48,17 @@ const Sign = (
 
                 {title === "Register" &&
                     <div className="flex">
-                     
+
                         <div className='twoPart'>
-                        <label>
-                            <span>Last name</span>
-                            <input className="input" type="text" required placeholder="" onChange={e => setFirstName(e.target.value)} />
-                        </label>
+                            <label>
+                                <span>Last name</span>
+                                <input className="input" type="text" required placeholder="" onChange={e => setFirstName(e.target.value)} />
+                            </label>
                         </div> <div className='twoPart'>
-                        <label>
-                            <span>Last name</span>
-                            <input className="input" type="text" required placeholder="" onChange={e => setLastName(e.target.value)} />
-                        </label>
+                            <label>
+                                <span>Last name</span>
+                                <input className="input" type="text" required placeholder="" onChange={e => setLastName(e.target.value)} />
+                            </label>
                         </div>
                     </div>}
 
@@ -77,15 +78,15 @@ const Sign = (
                     </label>
                 }
                 {title !== "Register" &&
-                        <div className='flex'>
-                            <div className='twoPart'>
-                                <label>
-                                    <input type="checkbox" name="rememberMe" defaultChecked={false} /> Remember for 30 Days
-                                </label>
-                            </div>
-                            <div className='buttonClass'><button className='button' onClick={()=>forget()}>Forgot password</button></div>
-
+                    <div className='flex'>
+                        <div className='twoPart'>
+                            <label>
+                                <input type="checkbox" name="rememberMe" defaultChecked={false} /> Remember for 30 Days
+                            </label>
                         </div>
+                        <div className='buttonClass'><button className='button' onClick={() => forget()}>Forgot password</button></div>
+
+                    </div>
 
                 }
 
@@ -96,8 +97,8 @@ const Sign = (
 
                 </button>
 
-                    <p className="signin" > {btnDescription} <Button onClick={() => setTitle("Login")}>{signButton}</Button> </p>
-                
+                <p className="signin" > {btnDescription} <Button onClick={() => setTitle("Login")}>{signButton}</Button> </p>
+
 
 
 
@@ -105,16 +106,16 @@ const Sign = (
             {/* <ConfirmDialog visible={true} title={'Reset your password'}
              description ={'the post will be displayed to the public once it passes the vetting team'} 
             // imgCard ={'completedIcon'}
-             /> */} 
-             
-             {/* <DialogInformation 
+             /> */}
+
+            {/* <DialogInformation 
              visible={true} 
              title={'Please check your mail'}
              description ={' We have sent a link of reset password to your email.'} 
              icon={<MailIcon sx={{ fontSize: "50px" }} />}
 
              /> */}
-             {/* <DialogInformation
+            {/* <DialogInformation
               visible={true}
               onHide={false}
               title={'Please check your mail'}
@@ -123,7 +124,7 @@ const Sign = (
             link={"Please click here to log in"}
             skip={'Skip, I’ll log in later'}
               /> */}
-               <DialogConfirmRect
+            {/* <DialogConfirmRect
              visible={true} 
              disable={false} 
              
@@ -131,9 +132,15 @@ const Sign = (
              description ={' We have sent a link of reset password to your email.'} 
              icon={<MailIcon sx={{ fontSize: "50px" }} />}
 
-             />
+             /> */}
+            <ResetPwd
+                visible={true}
+                disable={false}
 
-           
+            />
+
+
+
         </>
     )
 }
