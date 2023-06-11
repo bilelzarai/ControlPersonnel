@@ -5,8 +5,9 @@ import { Button } from 'react-md';
 // import DialogInformation from '../dialog-information/dialog-information';
 // import MailIcon from '@mui/icons-material/Mail';
 // import DialogConfirmRect from '../dialog-confirm-rect/dialog-confirm-rect';
-import ResetPwd from '../reset-pwd/reset-pwd';
-import EditProfile from '../edit-profile/edit-profile';
+// import ResetPwd from '../reset-pwd/reset-pwd';
+// import EditProfile from '../edit-profile/edit-profile';
+import Profile from '../profile/profile';
 
 const Sign = (    {
         titleForm,
@@ -139,11 +140,14 @@ const Sign = (    {
 
             />    */}
             
-            <EditProfile
+            {/* <EditProfile
+            visible={true}
+            disable={false}   /> */}
+
+            <Profile             
             visible={true}
             disable={false}
-
-        />
+            />
 
 
 
