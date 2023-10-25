@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ControlPersonnel/static/css/main.a583345f.css",
-    "main.js": "/ControlPersonnel/static/js/main.27559fcc.js",
+    "main.css": "/ControlPersonnel/static/css/main.5cdc3c01.css",
+    "main.js": "/ControlPersonnel/static/js/main.d8793ed8.js",
     "static/js/787.f0571c47.chunk.js": "/ControlPersonnel/static/js/787.f0571c47.chunk.js",
     "index.html": "/ControlPersonnel/index.html",
-    "main.a583345f.css.map": "/ControlPersonnel/static/css/main.a583345f.css.map",
-    "main.27559fcc.js.map": "/ControlPersonnel/static/js/main.27559fcc.js.map",
+    "main.5cdc3c01.css.map": "/ControlPersonnel/static/css/main.5cdc3c01.css.map",
+    "main.d8793ed8.js.map": "/ControlPersonnel/static/js/main.d8793ed8.js.map",
     "787.f0571c47.chunk.js.map": "/ControlPersonnel/static/js/787.f0571c47.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a583345f.css",
-    "static/js/main.27559fcc.js"
+    "static/css/main.5cdc3c01.css",
+    "static/js/main.d8793ed8.js"
   ]
 }
