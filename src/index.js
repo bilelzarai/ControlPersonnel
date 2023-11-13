@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import WeWillBackSoon from './components/we-will-back-soon/we-will-back-soon';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <WeWillBackSoon />
   </React.StrictMode>
 );
 

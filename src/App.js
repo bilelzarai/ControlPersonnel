@@ -1,46 +1,46 @@
 // import { useState } from "react";
 import "./App.scss";
-// import SignSr from "./components/form/form";
+import EditProfileEmployer from "./components/edit-profile-employer/edit-profile-employer";
+// import Sign from "./components/form/form";
 // import ListAllRequest from "./components/list-all-request/list-all-request";
 import WeWillBackSoon from "./components/we-will-back-soon";
 // import ConfirmDialog from "./components/dialog-confirm/confirm";
 // import SignUp from "./components/sign/sign-up/sign-up";
 function App() {
-  // const [title, setTitle] = useState("Register")
-  // const [signButtom, setSignButtom] = useState ("SIGNUP")
+  // const [title, setTitle] = useState("Register");
+  // const [signButtom, setSignButtom] = useState("SIGNUP");
   return (
-    //     <>
-    // {title === "Register" ?
-    //   <SignSr      
-    //       titleForm ={"Add new employee"} 
-    //       title ={title}
-    //       setTitle={()=>setTitle("Welcome back") }
-    //       btnName = {"Submit"} 
-    //       btnDescription={"Already have an acount ?"}  
-    //       signButton={"SignIn"}  
+    // <>
+    //   {/* {title === "Register" ? (
+    //     <Sign
+    //       titleForm={"Add new employee"}
+    //       title={title}
+    //       setTitle={() => setTitle("Welcome back")}
+    //       btnName={"Submit"}
+    //       btnDescription={"Already have an acount ?"}
+    //       signButton={"SignIn"}
     //       log="1"
     //       // candidate={candidate}
     //       // setCandidate={setCandidate}
-    //       /> 
-    //     :
-    //    <SignSr      
+    //     />
+    //   ) : (
+    //     <Sign
+    //       titleForm={"Welcome back! Please enter your details"}
+    //       title={title}
+    //       btnName={"Login"}
+    //       btnDescription={"Create an acount ?"}
+    //       setTitle={() => setTitle("Register")}
+    //       signButton={"SignUp"}
+    //       log="2"
 
-    //     titleForm ={"Welcome back! Please enter your details"} 
-    //     title ={title}
-    //     btnName = {"Login"} 
-    //     btnDescription={"Create an acount ?"}    
-    //     setTitle={()=>setTitle("Register") }
-    //     signButton={"SignUp"}  
-    //     log="2"
+    //       // candidate={candidate}
+    //       // setCandidate={setCandidate}
+    //     />
+    //   )} */}
 
-    //     // candidate={candidate}
-    //     // setCandidate={setCandidate}
-    //     />  
-    //     }
-
-    //     {/* <SignUp/> */}
-    // {/* <button onClick={()=>{setConfirm(false)}}> popup</button> */}
-    //       {/* {confirm && (
+    //   {/* <SignUp/> */}
+    //   {/* <button onClick={()=>{setConfirm(false)}}> popup</button> */}
+    //   {/* {confirm && (
     //         <ConfirmDialog
     //           visible={confirm}
     //           close={() => {
@@ -52,12 +52,11 @@ function App() {
     //         />
     //       )
     //       } */}
-
-    //     </>
+    // </>
 
     <>
       {/* <ListAllRequest /> */}
-      <WeWillBackSoon />
+      <EditProfileEmployer/>
     </>
 
     // <div className="App">

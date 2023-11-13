@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './form.scss';
 import { Button } from 'react-md';
-// import ConfirmDialog from '../dialog-confirm/confirm';
+import ConfirmDialog from '../dialog-confirm/confirm';
 // import DialogInformation from '../dialog-information/dialog-information';
 // import MailIcon from '@mui/icons-material/Mail';
 // import DialogConfirmRect from '../dialog-confirm-rect/dialog-confirm-rect';
@@ -40,7 +40,7 @@ const Sign = (    {
         <>
 
             {/* {candidate} */}
-            <form className="form">
+            {/* <form className="form">
                 {d.toLocaleTimeString() + "  " + d.toLocaleDateString()}
 
                 <p className="title">{title}  </p>
@@ -103,7 +103,7 @@ const Sign = (    {
 
 
 
-            </form >
+            </form > */}
             {/* <ConfirmDialog visible={true} title={'Reset your password'}
              description ={'the post will be displayed to the public once it passes the vetting team'} 
             // imgCard ={'completedIcon'}
@@ -145,7 +145,7 @@ const Sign = (    {
             disable={false}   /> */}
 
             <Profile             
-            visible={true}
+            visible={false}
             disable={false}
             />
 
