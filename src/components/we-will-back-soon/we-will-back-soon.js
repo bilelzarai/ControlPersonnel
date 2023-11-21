@@ -1,8 +1,9 @@
-import React from "react";
 import { Box, Button, Input } from "@mui/material";
+import CountDownDate from "../countdount-date/count-down-date";
 
 const WeWillBackSoon = () => {
-  return (
+  const deadline = new Date("December 17, 2023 ");
+   return (
     <Box
       sx={{
         background: "linear-gradient(to right,#009BBC,#023A4E)",
@@ -10,7 +11,6 @@ const WeWillBackSoon = () => {
         py: { xs: 5, md: 10 },
         px: { xs: 10, md: 20 },
         fontSize: 20,
-
       }}
     >
       <Box
@@ -26,6 +26,8 @@ const WeWillBackSoon = () => {
       >
         <div>Your Logo</div>
         <div>Coming Soon</div>
+        {/* <CountDownDate deadline={deadline} /> */}
+
         <Box
           display="flex"
           flexDirection={{ xs: "column", sm: "row" }}
@@ -34,6 +36,7 @@ const WeWillBackSoon = () => {
           // elevation={3}
           width={{ xs: "80%", md: "50%" }}
           sx={{
+            boxShadow: 3,
             backgroundColor: "#F5F5FA",
             borderRadius: 8,
             elevation: 8,
@@ -54,6 +57,7 @@ const WeWillBackSoon = () => {
           // elevation={3}
           width={{ xs: "80%", md: "50%" }}
           sx={{
+            boxShadow: 9,
             backgroundColor: "#F5F5FA",
             borderRadius: 8,
             elevation: 8,
@@ -62,8 +66,8 @@ const WeWillBackSoon = () => {
             mx: { xs: 30, md: 30 },
             my: { xs: 4, md: 4 },
             fontSize: 20,
-
-          }}        >
+          }}
+        >
           <Input
             className="MuiTextField-root"
             disableUnderline
